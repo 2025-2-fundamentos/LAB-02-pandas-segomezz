@@ -5,7 +5,7 @@ datos requeridos se encuentran en los archivos `tbl0.tsv`, `tbl1.tsv` y
 librerias de pandas para resolver las preguntas.
 """
 
-
+import pandas as pd
 def pregunta_08():
     """
     Agregue una columna llamada `suma` con la suma de `c0` y `c2` al
@@ -22,3 +22,6 @@ def pregunta_08():
     39   39   E    5  1998-01-26    44
 
     """
+    data= pd.read_csv("files/input/tbl0.tsv", sep ="\t")
+    data["suma"]= data["c0"]+data["c2"] 
+    return data
